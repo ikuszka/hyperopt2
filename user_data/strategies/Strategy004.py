@@ -21,12 +21,12 @@ class Strategy004(IStrategy):
     """
 
     #BUY params
-    buy_adx = IntParameter(25, 75, default=32)
-    buy_slowadx = IntParameter(20, 50, default=48)
-    buy_cci = IntParameter(-100, -50, default=-91)
-    buy_fastk_fastd = IntParameter(10, 20, default=19)
+    buy_adx = IntParameter(25, 75, default=55)
+    buy_slowadx = IntParameter(20, 50, default=25)
+    buy_cci = IntParameter(-100, -50, default=-55)
+    buy_fastk_fastd = IntParameter(10, 20, default=18)
     buy_slowfastk_slowfastd = IntParameter(10, 30, default=12)
-    buy_mean_volume = DecimalParameter(0.7, 0.8, default=0.762)
+    buy_mean_volume = DecimalParameter(0.7, 0.8, default=0.768)
 
     #Buy params enabled
     buy_adx_enabled = CategoricalParameter([True, False], default=True)
@@ -34,8 +34,8 @@ class Strategy004(IStrategy):
     
     
     #Sell params
-    sell_slowadx = IntParameter(15, 35, default=24)
-    sell_fastk_fastd = IntParameter(60, 80, default=71)
+    sell_slowadx = IntParameter(15, 35, default=28)
+    sell_fastk_fastd = IntParameter(60, 80, default=68)
 
     
     #Sell params enabled
@@ -45,15 +45,15 @@ class Strategy004(IStrategy):
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
-        "0":  0.092,
-        "37":  0.06,
-        "83":  0.037,
-        "165":  0
+        "0":  0.044,
+        "26":  0.031,
+        "36":  0.013,
+        "60":  0
     }
 
     # Optimal stoploss designed for the strategy
     # This attribute will be overridden if the config file contains "stoploss"
-    stoploss = -0.336
+    stoploss = -0.31
 
     # Optimal timeframe for the strategy
     timeframe = '5m'
